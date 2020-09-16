@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <title>Visualization</title>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row m-2 p-2">
+            <h3>Today</h3>
+        </div>
+        <div class="row m-2 p-2">
+            <div class="col-9">
+                <div class="row">   
+                    <div class="col border rounded-sm m-2 bg-danger text-white">
+                        <div id="active"></div>
+                        <h6>Active Cases</h6>
+                            
+                    </div>
+                    <div class="col border rounded-sm m-2 bg-success text-white">
+                        <div id="recovered"></div>
+                        <h6>Recovered</h6>
+                            
+                    </div>
+                    <div class="col border rounded-sm m-2 bg-secondary text-white">
+                        <div id="death"></div>
+                        <h6>Deaths</h6>
+                            
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col">
+                        <canvas id="myChart"></canvas>
+                    </div>  
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="row border rounded-sm m-2 p-2 border-danger">
+                    <table>
+                        <tr>
+                           <td><h5>Cases</h5></td>
+                        </tr>
+                        
+                        <tr>
+                           <td>New      </td>
+                           <td class="text-right" id="new"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Critical</td>
+                            <td id="critical"></td>
+                         </tr>
+                         <tr>
+                            <td>Per Million Population     </td>
+                            <td id="c_mpop"></td>
+                         </tr>
+                     </table>
+
+                </div>
+                <div class="row border rounded-sm m-2 p-2 border-secondary">
+                    <table>
+                        <tr>
+                           <td><h5>Deaths</h5></td>
+                        </tr>
+                        
+                        <tr>
+                           <td>New</td>
+                           <td id="new_d"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Critical</td>
+                            <td id="total_d"></td>
+                         </tr>
+                     </table>
+                </div>
+                <div class="row border rounded-sm m-2 p-2 border-info">
+                    <table>
+                        <tr>
+                           <td><h5>Tests</h5></td>
+                        </tr>
+                        
+                        <tr>
+                           <td>Per Million Population</td>
+                           <td id="test_new"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Total</td>
+                            <td id="total_t"></td>
+                         </tr>
+                     </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
